@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="mainer">
+    <h1 class="title">Please fill in the following form:</h1>
+
+    <div class="container">
+      <form action="#" class="form">
+        <p class="group_title">Your details</p>
+        <select name="title" id="title">
+          <option value="title" disabled selected>Title</option>
+          <option value="mr" id="mr">Mr.</option>
+          <option value="ms" id="ms">Ms.</option>
+          <option value="mrs" id="mrs">Mrs.</option>
+        </select>
+        <br>
+
+        <input type="text" name="fname" placeholder="First name" id="fname">
+        <br>
+        <input type="text" name="lname" placeholder="Last name" id="lname">
+        <br>
+        <input type="tel" name="tel" placeholder="Contact phone number" id="tel">
+        <br>
+
+        <p class="group_title">Your address</p>
+        <input type="text" name="street" placeholder="Street" id="street">
+        <br>
+        <input type="text" name="apt" placeholder="Apartment" id="apt">
+        <br>
+        <input type="text" name="city" placeholder="City or town" id="city">
+        <br>
+        <input type="text" name="country" placeholder="Country" id="country">
+        <br>
+
+        <p class="group_title">Account details</p>
+        <input type="email" name="email" placeholder="E-mail address" id="email">
+        <br>
+        <input type="password" name="password" placeholder="Password" id="password">
+        <br>
+
+        <input type="checkbox" name="terms" id="privacy">
+        <label for="privacy">I agree to terms and conditions</label>
+        <br>
+        <input type="submit" value="Submit">
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src=" js/script.js"></script>
+
+</body>
+
+</html>
