@@ -5,9 +5,7 @@ $(document).ready(function () {
     const form = $(".form").get(0);
     const inputs = $("input[type!='submit']");
     const title = $("select#title").get(0),
-        titleMr = $("option#mr").get(0),
-        titleMs = $("option#ms").get(0),
-        titleMrs = $("option#mrs").get(0),
+
         fname = $("input#fname").get(0),
         lname = $("input#lname").get(0),
         tel = $("input#tel").get(0),
@@ -28,6 +26,8 @@ $(document).ready(function () {
     }
 
 
+    console.log($(title).val());
+
 
     $(form).on("submit", function (event) {
         event.preventDefault();
@@ -40,7 +40,7 @@ $(document).ready(function () {
         let showWelcomeMessage = true;
 
         // validation if the field is blank
-        if (!titleMr.selected && !titleMs.selected && !titleMrs.selected) {
+        if ($(title).val() == null) {
             addErrorMessage(title, "This field is obligatory. Please choose from the sugggested variants");
             $(title).css("border", "1.5px solid #da3535");
             showWelcomeMessage = false;
