@@ -16,49 +16,132 @@
     <h1 class="title">Please fill in the following form:</h1>
 
     <div class="container">
-      <form action="#" class="form">
-        <p class="group_title">Your details</p>
-        <select name="title" id="title">
-          <option value="title" disabled selected>Title</option>
-          <option value="mr" id="mr">Mr.</option>
-          <option value="ms" id="ms">Ms.</option>
-          <option value="mrs" id="mrs">Mrs.</option>
-        </select>
-        <br>
 
-        <input type="text" name="fname" placeholder="First name" id="fname">
-        <br>
-        <input type="text" name="lname" placeholder="Last name" id="lname">
-        <br>
-        <input type="tel" name="tel" placeholder="Contact phone number" id="tel">
-        <br>
+      <div class="forms">
+        <form action="#" class="form_profile-info">
+          <p class="group_title">Your details</p>
+          <div class="title-container"><select name="title" id="title">
+              <option value="title" disabled selected>Title</option>
+              <option value="mr" id="mr">Mr.</option>
+              <option value="ms" id="ms">Ms.</option>
+              <option value="mrs" id="mrs">Mrs.</option>
+            </select>
+            <p class="required_star">*</p>
+            <div class="error_message"></div>
+          </div>
 
-        <p class="group_title">Your address</p>
-        <input type="text" name="street" placeholder="Street" id="street">
-        <br>
-        <input type="text" name="apt" placeholder="Apartment" id="apt">
-        <br>
-        <input type="text" name="city" placeholder="City or town" id="city">
-        <br>
-        <input type="text" name="country" placeholder="Country" id="country">
-        <br>
+          <div class="fname-container">
+            <input type="text" name="fname" placeholder="First name" id="fname">
+            <p class="required_star">*</p>
+            <div class="error_message"></div>
 
-        <p class="group_title">Account details</p>
-        <input type="email" name="email" placeholder="E-mail address" id="email">
-        <br>
-        <input type="password" name="password" placeholder="Password" id="password">
-        <br>
+          </div>
 
-        <input type="checkbox" name="terms" id="privacy">
-        <label for="privacy">I agree to terms and conditions</label>
-        <br>
-        <input type="submit" value="Submit">
+          <div class="lname-container">
+            <input type="text" name="lname" placeholder="Last name" id="lname">
+            <p class="required_star">*</p>
+            <div class="error_message"></div>
 
-      </form>
+          </div>
+
+          <div class="tel-container">
+            <input type="tel" name="tel" placeholder="Contact phone number" id="tel">
+            <p class="required_star">*</p>
+            <div class="error_message"></div>
+
+          </div>
+
+          <p class="group_title">Account details</p>
+          <div class="email-container">
+            <input type="email" name="email" placeholder="E-mail address" id="email">
+            <p class="required_star">*</p>
+            <div class="error_message"></div>
+
+          </div>
+
+          <div class="password-container">
+            <input type="password" name="password" placeholder="Password" id="password">
+            <p class="required_star">*</p>
+            <div class="error_message"></div>
+
+          </div>
+
+          <div class="privacy-container">
+            <input type="checkbox" name="terms" id="privacy">
+            <label for="privacy">I agree to terms and conditions</label>
+            <p class="required_star">*</p>
+            <div class="error_message"></div>
+
+          </div>
+
+          <input type="submit" value="Submit">
+
+          <div class="welcome_message_profile"></div>
+
+
+        </form>
+
+
+
+
+        <form action="#" class="form_address-info">
+          <p class="group_title">Your address</p>
+
+          <div class="street-container">
+            <input type="text" name="street" placeholder="Street" id="street">
+            <p class="required_star">*</p>
+            <div class="error_message"></div>
+
+          </div>
+
+          <div class="apt-container">
+            <input type="text" name="apt" placeholder="Apartment" id="apt">
+            <div class="error_message"></div>
+
+          </div>
+
+          <div class="city-container">
+            <input type="text" name="city" placeholder="City or town" id="city">
+            <p class="required_star">*</p>
+            <div class="error_message"></div>
+
+          </div>
+
+          <div class="country-container">
+            <input type="text" name="country" placeholder="Country" id="country">
+            <div class="error_message"></div>
+
+          </div>
+
+          <div class="pcode-container">
+            <input type="text" name="postal_code" placeholder="Postal code" id="postal_code">
+            <p class="required_star">*</p>
+            <div class="error_message"></div>
+
+          </div>
+
+          <input type="submit" value="Submit">
+
+          <div class="welcome_message_address"></div>
+
+
+        </form>
+
+      </div>
+
+      <div class="images">
+        <img src="images/img.jpg" alt="New member">
+        <img src="images/img2.jpg" alt="New member">
+      </div>
 
     </div>
 
+
+
+
   </div>
+
+
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
