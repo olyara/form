@@ -7,6 +7,7 @@
   <title>Form</title>
   <link rel="stylesheet" href="css/main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -20,49 +21,49 @@
       <div class="forms">
         <form action="#" class="form_profile-info">
           <p class="group_title">Your details</p>
-          <div class="title-container"><select name="title" id="title">
+          <div class="title-container">
+            <select name="title" id="title" class="required">
               <option value="title" disabled selected>Title</option>
               <option value="mr" id="mr">Mr.</option>
               <option value="ms" id="ms">Ms.</option>
               <option value="mrs" id="mrs">Mrs.</option>
             </select>
             <p class="required_star">*</p>
-            <div class="error_message"></div>
+            <span class="error_message">Obligatory field. Please choose from the variants</span>
           </div>
 
           <div class="fname-container">
-            <input type="text" name="fname" placeholder="First name" id="fname">
+            <input type="text" name="fname" placeholder="First name" id="fname" class="required alphabetic">
             <p class="required_star">*</p>
-            <div class="error_message"></div>
+            <span class="error_message">Obligatory field. Please fill it out.</span>
 
           </div>
 
           <div class="lname-container">
-            <input type="text" name="lname" placeholder="Last name" id="lname">
+            <input type="text" name="lname" placeholder="Last name" id="lname" class="required alphabetic">
             <p class="required_star">*</p>
-            <div class="error_message"></div>
+            <span class="error_message">Obligatory field. Please fill it out.</span>
 
           </div>
 
           <div class="tel-container">
-            <input type="tel" name="tel" placeholder="Contact phone number" id="tel">
+            <input type="tel" name="tel" placeholder="Contact phone number" id="tel" class="required">
             <p class="required_star">*</p>
-            <div class="error_message"></div>
+            <span class="error_message">Obligatory field. Please fill it out.</span>
 
           </div>
 
           <p class="group_title">Account details</p>
           <div class="email-container">
-            <input type="email" name="email" placeholder="E-mail address" id="email">
+            <input type="email" name="email" placeholder="E-mail address" id="email" class="required">
             <p class="required_star">*</p>
-            <div class="error_message"></div>
-
+            <span class="error_message">Please enter a valid e-mail address.</span>
           </div>
 
           <div class="password-container">
-            <input type="password" name="password" placeholder="Password" id="password">
+            <input type="password" name="password" placeholder="Password" id="password" class="required">
             <p class="required_star">*</p>
-            <div class="error_message"></div>
+            <span class="error_message">Obligatory field. Please fill it out.</span>
 
           </div>
 
@@ -70,13 +71,12 @@
             <input type="checkbox" name="terms" id="privacy">
             <label for="privacy">I agree to terms and conditions</label>
             <p class="required_star">*</p>
-            <div class="error_message"></div>
+            <span class="error_message">Obligatory field. Please check the box.</span>
 
           </div>
 
           <input type="submit" value="Submit">
-
-          <div class="welcome_message_profile"></div>
+          <div class="cancel-button_profile">Cancel</div>
 
 
         </form>
@@ -88,50 +88,53 @@
           <p class="group_title">Your address</p>
 
           <div class="street-container">
-            <input type="text" name="street" placeholder="Street" id="street">
+            <input type="text" name="street" placeholder="Street" id="street" class="required">
             <p class="required_star">*</p>
-            <div class="error_message"></div>
+            <span class="error_message">Obligatory field. Please fill it out.</span>
 
           </div>
 
           <div class="apt-container">
             <input type="text" name="apt" placeholder="Apartment" id="apt">
-            <div class="error_message"></div>
+            <span class="error_message"></span>
 
           </div>
 
           <div class="city-container">
-            <input type="text" name="city" placeholder="City or town" id="city">
+            <input type="text" name="city" placeholder="City or town" id="city" class="required">
             <p class="required_star">*</p>
-            <div class="error_message"></div>
+            <span class="error_message">Obligatory field. Please fill it out.</span>
 
           </div>
 
           <div class="country-container">
             <input type="text" name="country" placeholder="Country" id="country">
-            <div class="error_message"></div>
+            <span class="error_message"></span>
 
           </div>
 
           <div class="pcode-container">
-            <input type="text" name="postal_code" placeholder="Postal code" id="postal_code">
+            <input type="text" name="postal_code" placeholder="Postal code" id="postal_code" class="required">
             <p class="required_star">*</p>
-            <div class="error_message"></div>
-
+            <span class="error_message">Obligatory field. Please fill it out.</span>
           </div>
 
           <input type="submit" value="Submit">
-
-          <div class="welcome_message_address"></div>
+          <div class="cancel-button_address">Cancel</div>
 
 
         </form>
 
       </div>
 
-      <div class="images">
-        <img src="images/img.jpg" alt="New member">
-        <img src="images/img2.jpg" alt="New member">
+      <div class="submitted-info">
+        <div class="welcome_message_profile"></div>
+        <div class="edit-button_profile">Edit info</div>
+        <div class="add-button_profile">Add new</div>
+
+        <div class="welcome_message_address"></div>
+        <div class="edit-button_address">Edit info</div>
+        <div class="add-button_address">Add new</div>
       </div>
 
     </div>

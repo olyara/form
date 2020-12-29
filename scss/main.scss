@@ -79,42 +79,10 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 20px 0 0 0;
-  
-  .images {
-    max-width: 295px;
-       
-    img {
-      display: block;
-      border-radius: 7px;
-      max-width: 100%;
-      height: auto;
-          
-      &:nth-child(2) {
-        margin: 20px 0 0;
-      }
-    }
-  }
-  
+  margin: 20px 0 0 0;  
 }
 
 .form_profile-info, .form_address-info {
-  position: relative;
-
-  .welcome_message_profile, .welcome_message_address {
-    background-color: #778899;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 15px;
-    padding: 15px;
-    visibility: hidden;
-    transition-duration: 2s;
-    position: absolute;
-    bottom: 40%;
-    left: 40%;
-  }
-
 
   .required_star {
     display: inline;
@@ -142,13 +110,14 @@ a:hover {
       background-color: #fec107;
       border-radius: 20px;
       padding: 5px 10px;
-
+      &:hover, &:focus {
+        background-color: #fec007bb;
+      }
     }
 
     &:focus{
       border: 2px solid #778899;
       padding: 3px 8px;
-
     }
   }
 
@@ -157,11 +126,52 @@ a:hover {
     font-size: 14px;
     font-weight: 300;
     line-height: 15px;
-    display: inline-block;
     margin: 0 0 0 5px;
     width: 400px;
     visibility: hidden;
   }
+ 
+}
 
+.welcome_message_profile {
+  background-color: #778899;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 15px;
+  padding: 15px;
+  transition-duration: 2s;
+  border-radius: 3%;
+  max-width: 300px;
+  margin: 10px 0px;
+  display: none;
+}
+
+.welcome_message_address {
+  @extend .welcome_message_profile;
   
 }
+
+[class^="edit-button"], [class^="add-button"] {
+  background-color: #fec107;
+  max-width: 80px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 17px;
+  text-align: center;
+  margin: 10px auto;
+  cursor: pointer;
+  &:hover, &:focus {
+    background-color: #fec007bb;
+  }
+
+  display: none;
+}
+
+[class^="cancel-button"] {
+  @extend [class^="edit-button"];
+  // margin: 0px auto 0px 0px;
+}
+
